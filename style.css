@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg: #0f1220;
+  --card-bg: rgba(255, 255, 255, 0.08);
+  --primary: #8b5cf6;
+  --secondary: #22d3ee;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --border: rgba(255, 255, 255, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #1b1f3b, var(--bg));
+  color: var(--text);
+  line-height: 1.7;
+}
+
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(15, 18, 32, 0.75);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.5rem;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--secondary);
+}
+
+
+.hero {
+  text-align: center;
+  padding: 5rem 2rem 4rem;
+}
+
+.hero img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--primary);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.hero p {
+  color: var(--muted);
+  margin-top: 0.5rem;
+  font-size: 1.05rem;
+}
+
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 3rem 2rem;
+}
+
+section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  display: block;
+  margin-top: 0.4rem;
+  border-radius: 5px;
+}
+
+
+.card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+.card h3 {
+  color: var(--secondary);
+  margin-bottom: 0.8rem;
+  font-size: 1.15rem;
+}
+
+.card p,
+.card li {
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.card ul {
+  padding-left: 1.2rem;
+}
+
+.card ul li {
+  margin-bottom: 0.4rem;
+}
+
+
+section ul {
+  list-style: none;
+}
+
+section ul li {
+  margin-bottom: 0.8rem;
+  color: var(--text);
+}
+
+
+#contact p {
+  margin-bottom: 1rem;
+}
+
+#contact a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  section {
+    padding: 3rem 1.5rem;
+  }
+}
+section {
+  scroll-margin-top: 90px;
+}
+/* JS animations */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Active nav link */
+.nav-links a.active {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+/* Scroll to top button */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
