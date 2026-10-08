@@ -7,3 +7,4 @@ This portfolio currently contains only my skills and education/training.
 It does not include my projects yet.
 
 Its goal is to share my profile with recruiters, collaborators, and anyone interested in my background.
+
