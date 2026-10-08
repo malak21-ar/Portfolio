@@ -27,7 +27,7 @@ body {
   line-height: 1.7;
 }
 
-
+/* NAVBAR */
 .navbar {
   position: sticky;
   top: 0;
@@ -64,7 +64,7 @@ body {
   color: var(--secondary);
 }
 
-
+/* HERO */
 .hero {
   text-align: center;
   padding: 5rem 2rem 4rem;
@@ -91,10 +91,12 @@ body {
   font-size: 1.05rem;
 }
 
+/* SECTIONS */
 section {
   max-width: 1000px;
   margin: auto;
   padding: 3rem 2rem;
+  scroll-margin-top: 90px;
 }
 
 section h2 {
@@ -113,7 +115,11 @@ section h2::after {
   border-radius: 5px;
 }
 
+section ul {
+  list-style: none;
+}
 
+/* CARDS (Education, Internships, Certifications) */
 .card {
   background: var(--card-bg);
   backdrop-filter: blur(12px);
@@ -149,17 +155,7 @@ section h2::after {
   margin-bottom: 0.4rem;
 }
 
-
-section ul {
-  list-style: none;
-}
-
-section ul li {
-  margin-bottom: 0.8rem;
-  color: var(--text);
-}
-
-
+/* CONTACT */
 #contact p {
   margin-bottom: 1rem;
 }
@@ -174,7 +170,7 @@ section ul li {
   text-decoration: underline;
 }
 
-
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -188,9 +184,7 @@ section ul li {
     padding: 3rem 1.5rem;
   }
 }
-section {
-  scroll-margin-top: 90px;
-}
+
 /* JS animations */
 .hidden {
   opacity: 0;
