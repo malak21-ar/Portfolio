@@ -11,7 +11,6 @@ window.addEventListener("scroll", () => {
       current = section.getAttribute("id");
     }
   });
-
   navLinks.forEach(link => {
     link.classList.remove("active");
     if (link.getAttribute("href") === `#${current}`) {
